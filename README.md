@@ -1,7 +1,10 @@
 # FinAPI
 
 /equity endpoint for requesting data
-    usage: 0.0.0.0:8080/equity?tickers=AAPL,GOOGL,D
+    
+    
+    
+    Example URL =  0.0.0.0:8080/equity?tickers=AAPL,GOOGL,D
     
     notes: this parses query and will return data for every ticker in json format
     
