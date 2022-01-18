@@ -39,7 +39,7 @@ func graphrequestHandler (c *gin.Context) {
 	}
 	checkErr(genchart.Err())
 	
-	graph := asciigraph.Plot(data, asciigraph.Height(20))
+	graph := asciigraph.Plot(data, asciigraph.Height(60))
 
 	
 	c.String(200,"%v",graph)
