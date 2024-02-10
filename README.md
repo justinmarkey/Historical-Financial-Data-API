@@ -1,4 +1,4 @@
-# Historical Finanacial Data API
+# Historical Financial Data API
 
 ABOUT:
 This program serves to allow other interenal programs a way to request the historical data on financial securites. This works by spinning up the gin engine and making requests to the gin local server. This script takes requests from the gin server and sends them to the Yahoo Finance API (implemented under the library "finance-go"). The Yahoo API will return the closing data for the past year in JSON format. 
