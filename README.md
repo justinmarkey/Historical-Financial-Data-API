@@ -1,7 +1,7 @@
 # Historical Financial Data API
 
 ABOUT:
-This program serves to connect internal programs to an API via allowing requests the historical data on financial securites. This works by spinning up the gin engine and making requests to the gin local server. This script takes requests from the gin server and sends them to the Yahoo Finance API (liased by the library "finance-go"). The API will return the closing data for the past year in JSON format. 
+This program serves to connect internal programs to an API via allowing connection to the historical data of equity securites. This works by spinning up the gin engine and making requests to the gin local server. This script takes requests from the gin server and sends them to the Yahoo Finance API (liased by the library "finance-go"). The API will return the closing data for the past year in JSON format. 
 
 USE:
 to request equity data:
