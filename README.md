@@ -1,20 +1,26 @@
 # Historical Financial Data API
 
-ABOUT:
-This program serves to connect internal programs to an API via allowing connection to the historical data of equity securites. This works by spinning up the gin engine and making requests to the gin local server. This script takes requests from the gin server and sends them to the Yahoo Finance API (liased by the library "finance-go"). The API will return the closing data for the past year in JSON format. 
+## Overview
+This project provides a local API for retrieving historical equity price data. It spins up a Gin web server that accepts HTTP requests and proxies them to the Yahoo Finance API via the finance-go library.
+The API currently returns daily closing prices for the past year, formatted as JSON, and can also generate simple price charts for individual equities.
+This service is designed to be consumed by internal programs or tools that need quick access to historical market data without directly calling external APIs. 
 
-USE:
-to request equity data:
-endpoint: /equity 
-   
-Example request =  0.0.0.0:8080/equity?tickers=AAPL,GOOGL,D
-    
-    notes: this parses query and will return data for every ticker in json format
+## Features
+- Retrieve 1 year of historical closing price data
+- Support for multiple equity tickers per request
+- JSON-formatted responses
+- Simple equity price chart generation
+- Lightweight local server using Gin
 
-to request a graph of an equity:
-endpoint: /graph
 
-Example graph request: 0.0.0.0:8080/graph?ticker=AAPL ... will chart AAPLs close for past year
-    
-    notes: the chart has a height of 60 for legibility.  Timeframe = Length: 1 year from today, Interval: 1 day.
-    
+### Example of an equity request
+http://0.0.0.0:8080/equity?tickers=AAPL,GOOGL,D
+
+### Example of a graph request
+http://0.0.0.0:8080/graph?ticker=AAPL
+
+## Test in terminal
+
+'''bash
+curl "http://0.0.0.0:8080/graph?ticker=AAPL"
+'''
