@@ -21,6 +21,6 @@ http://0.0.0.0:8080/graph?ticker=AAPL
 
 ## Test in terminal
 
-'''bash
+```bash
 curl "http://0.0.0.0:8080/graph?ticker=AAPL"
-'''
+```
